@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top|center"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.bitnation.onerm.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textAlignment="center"
+        android:text="Weight"
+        android:id="@+id/user_weight" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/minus_25lb"
+            android:id="@+id/dec_weight_button"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"/>
+
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/weight_rep_text"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/plus_25lb"
+            android:id="@+id/inc_weight_button"
+            android:background="@color/colorBlack"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="1 rep"
+            android:id="@+id/num_reps_text"
+            android:textAlignment="center"/>
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/repCountSeekBar"
+            android:layout_weight="1"
+            android:max="11"
+            android:progress="0"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="One Rep Max"
+            android:textAlignment="center"
+            android:id="@+id/one_rep_text"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0 lb"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:id="@+id/one_rep_val"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_gravity="center_horizontal">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:id="@+id/pct_table"
+            android:stretchColumns="*">
+
+        </TableLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
